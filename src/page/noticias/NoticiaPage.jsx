@@ -284,11 +284,13 @@ const NoticiaPage = () => {
     }
   };
 
+  const navigate = useNavigate();
+  
   return (
     <div className="App">
       <HeaderComponent isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
-      <div className="banner" style={{margin: 0}}>
+      <div className="banner" style={{margin: 0, cursor: 'pointer'}} onClick={() => navigate('/leitura')}>
         <img src="Buzeira-armas.webp" alt='' style={{width: '100%', height: '60vh'}} />
         <div className="banner-overlay" style={{textAlign: 'center'}}>
           <h2>Buzeira recorreu a “Neymar do PCC” em conflito sobre Lamborghini</h2>
